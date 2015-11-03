@@ -31,11 +31,6 @@ public class StringUtilsTest {
     }
 
     @Test
-    public void getNumberEntrySymbolTestBlankSymbolInLine() throws Exception {
-        Assert.assertThat(0, is (StringUtils.getNumberEntrySymbol(' ', "123456789")));  //TODO
-    }
-
-    @Test
     public void isSameElementsTestNotRepeatElementsInLine() throws Exception{
         Assert.assertThat(false, is (StringUtils.isSameElements(new String[]{"1", "2", "3", "4"})));
     }
