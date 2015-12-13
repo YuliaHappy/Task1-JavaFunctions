@@ -6,7 +6,7 @@ public class StringUtils {
      * @param originLine
      * @return
      */
-    public static int getNumberEntrySymbol(char symbol, String originLine) {
+    public static int countEntrySymbol(char symbol, String originLine) {
         int numberEntry = 0;
         for (char character: originLine.toCharArray()) {
             if (symbol == character) {
@@ -21,13 +21,14 @@ public class StringUtils {
      * @param arrayLine - массив строк
      * @return - true(если есть повторяющиеся элементы) false(иначе)
      */
-    public static boolean isSameElements(String[] arrayLine) {
-        if(arrayLine != null) {
-            for (int i = 0; i < arrayLine.length; i++) {
-                for (int j = i + 1; j < arrayLine.length; j++) {
-                    if (arrayLine[i].equals(arrayLine[j])) {
-                        return true;
-                    }
+    public static boolean isEqualElements(String[] arrayLine) {
+        if(arrayLine == null) {
+            return false;
+        }
+        for (int i = 0; i < arrayLine.length; i++) {
+            for (int j = i + 1; j < arrayLine.length; j++) {
+                if (arrayLine[i].equals(arrayLine[j])) {
+                    return true;
                 }
             }
         }
